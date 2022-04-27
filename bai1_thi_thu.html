@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let array =[1,2,2,3,3,4,5,6,7,8]
+    let temp;
+    for(let i =0;i<array.length;i++){
+        for(let j=i+1;j<array.length;j++){
+            if(array[i]>array[j]){
+                temp=array[i];
+                array[i]=array[j]
+                array[j]=temp;
+            }
+        }
+    }
+    let newArray =array
+    console.log(newArray)
+    let count=0;
+    for(let k=0;k<newArray.length;k++){
+        if(newArray[k+1]===newArray[k]){
+            continue;
+        }
+        else if(newArray[k]<newArray[k+1]){
+            count++;
+            if(count===3){
+                console.log('SO diem cao thu ba la:'+newArray[k])
+                break;
+            }
+        }
+    }
+</script>
